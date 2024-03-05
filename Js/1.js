@@ -17,3 +17,8 @@ b = a;
 
 console.log(a);
 // op: 6
+
+
+
+
+
