@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Responsive Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .box {
+      height: 100px;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .blue {
+      background-color: blue;
+      height: 500px;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+    .yellow1 {
+      background-color: yellow;
+        height: 200px;
+    }
+    .yellow2 {
+      background-color: yellow;
+        width: 350px;
+        height: 250px;
+    }
+
+    /* Media Queries for Mobile Devices */
+    @media only screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 5px;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box red"></div>
+    <div class="box green"></div>
+  </div>
+  <div class="container">
+    <div class="box blue"> 
+        <div class="container">
+            <div class="box yellow1"></div>
+            <div class="box yellow1"></div>
+        </div><div class="container">
+            <div class="box yellow2"></div>
+        </div></div>
+    <div class="box yellow"></div>
+</div>
+
+</div>
+</body>
+</html>
