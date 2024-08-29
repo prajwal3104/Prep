@@ -10,9 +10,8 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-# Install dependencies
 RUN npm install
 
 COPY . .
 
-ENTRYPOINT ["node", "main.js"]
+ENTRYPOINT ["node", "app.js"]

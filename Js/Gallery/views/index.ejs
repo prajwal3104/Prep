@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Photo Gallery</h1>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="photo" accept="image/*">
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Photos:</h2>
+  <ul>
+    <% photos.forEach((photo, index) => { %>
+      <li>
+        <img src="data:<%= photo.contentType %>;base64,<%= photo.data.toString('base64') %>" alt="<%= photo.name %>">
+        <p><%= photo.name %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
